@@ -6,7 +6,7 @@
 
 <img alt="Testing-Library" src="https://img.shields.io/badge/-TestingLibrary-%23E33332?style=for-the-badge&logo=testing-library&logoColor=white"/>
 
-### From Course: React Testing Library and Jest: The Complete Guide
+### From Course: React Testing Library and Jest: The Complete Guide. By Stephen Grider.
 
 A complete, all-in-one guide to fully testing your React projects using React Testing Library and Jest.
 

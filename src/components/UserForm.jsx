@@ -1,14 +1,26 @@
+import { useState } from "react";
 
-export const UserForm = () => {
+
+export const UserForm = ( { onUserAdd } ) => {
+    const [ email, setEmail ] = useState( '' );
+    const [ name, setName ] = useState( '' );
+
+    const handleSubmit = ( event ) => {
+        event.preventDefault();
+        onUserAdd( { name, email } );
+        setEmail( '' );
+        setName( '' );
+    };
+
     return (
-        <form>
+        <form onSubmit={ handleSubmit }>
             <div>
                 <label>Name</label>
-                <input type="text" />
+                <input value={ name } onChange={ event => setName( event.target.value ) } type="text" />
             </div>
             <div>
                 <label>Email</label>
-                <input type="text" />
+                <input value={ email } onChange={ event => setEmail( event.target.value ) } type="text" />
             </div>
 
             <button>Add User</button>
